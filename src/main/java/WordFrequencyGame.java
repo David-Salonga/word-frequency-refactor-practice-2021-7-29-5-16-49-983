@@ -14,7 +14,7 @@ public class WordFrequencyGame {
 
             try {
 
-                List<WordInfo> wordInfos = getWordInfoTemp(sentence);
+                List<WordInfo> wordInfos = getWordInfo(sentence);
 
                 wordInfos.sort((w1, w2) -> w2.getWordCount() - w1.getWordCount());
 
@@ -32,7 +32,7 @@ public class WordFrequencyGame {
         }
     }
 
-    private List<WordInfo> getWordInfoTemp(String sentence) {
+    private List<WordInfo> getWordInfo(String sentence) {
         List<String> words = Arrays.asList(sentence.split(BLANK_SPACE));
         List<String> distinctWords =
                 words.stream()
